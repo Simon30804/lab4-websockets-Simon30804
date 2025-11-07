@@ -1,13 +1,19 @@
 # Lab 4 WebSocket -- Project Report
 
 ## Description of Changes
-[Detailed description of all changes made]
+- Actualizado ComplexClient, para que después de recibir el mensaje inicial "The doctor is in", envía "Im feeling sad." al servidor.
+- Completado el test onChat, mediante el uso de assertTrue(size in 4..5) en lugar de usar assertEquals, ya que el orden/timing de mensajes puede variar según la máquina.
+- Verificamos que el primer mensaje es correcto (list[0] == "The doctor is in.").
+
 
 ## Technical Decisions
-[Explanation of technical choices made]
+- Rango 4..5 en la aserción, piues el mínimo de mensajes garantizado son 3 iniciales + 1 respuesta, con la posibilidad de un quinto mensaje adicional por variación temporal en el servidor.
 
 ## Learning Outcomes
-[What you learned from this assignment]
+- Uso práctico de WebSocket en Spring Boot 
+- Control de sincronización en test concurrentes con CountDownLatch
+- Diferencias entre pruebas deterministas, donde podemos hacer uso de assertEquals, y pruebas tolerantes a concurrencia, donde hacemos uso de aserciones sobre rango mediante assertTrue.
+- Comportamiento de un bot tipo Eliza y su comportamiento basado en patrones
 
 ## AI Disclosure
 ### AI Tools Used
