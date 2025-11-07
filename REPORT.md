@@ -5,7 +5,7 @@
 - Completado el test onChat, mediante el uso de assertTrue(size in 4..5) en lugar de usar assertEquals, ya que el orden/timing de mensajes puede variar según la máquina.
 - Verificamos que el primer mensaje es correcto (list[0] == "The doctor is in.").
 
-
+ 
 ## Technical Decisions
 - Rango 4..5 en la aserción, piues el mínimo de mensajes garantizado son 3 iniciales + 1 respuesta, con la posibilidad de un quinto mensaje adicional por variación temporal en el servidor.
 
